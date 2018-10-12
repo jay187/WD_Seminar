@@ -1,0 +1,110 @@
+body {
+      color: #333;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      height: auto;
+      width: 100%;
+    }
+
+    .clear {
+      clear: both;
+    }
+
+    .page {
+      background-color: #ccc;
+      /*margin: 0 auto;*/
+      margin-top: 0;
+      margin-right: auto;
+      margin-bottom: 0;
+      margin-left: auto;
+      width: 850px;
+    }
+
+    .header {
+      background-color: #eee;
+      padding: 20px;
+    }
+
+    .header .logo {
+      float: left;
+      margin-right: 50px;
+      width: 50px;
+    }
+
+    .header .navigation {
+      float: left;
+    }
+
+    .header .menu {
+      list-style-type: none;
+    }
+
+    .header .menu li {
+      float: left;
+      padding: 0 10px;
+    }
+
+    .header .menu li a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .header .menu li a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      position: relative;
+    }
+
+    .hero-text {
+      color: #fff;
+      font-size: 80px;
+      line-height: 80px;
+      margin-top: -40px;
+      position: absolute;
+      text-align: center;
+      text-shadow: 2px 2px 4px #666;
+      width: 100%;
+      top: 50%;
+    }
+
+    .main {
+      padding: 20px 20px 50px;
+    }
+
+    .sidebar {
+      float: left;
+      width: 230px;
+    }
+
+    .content {
+      float: left;
+      margin-left: 50px;
+      width: 730px;
+    }
+
+    .content img {
+      float: left;
+      margin: 5px 20px 5px 0;
+      width: 400px;
+    }
+
+    .content p:first-child {
+      margin-top: 0;
+    }
+
+    .image-caption {
+      font-size: 14px;
+    }
+
+    .footer {
+      background-color: #666;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
