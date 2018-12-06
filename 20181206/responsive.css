@@ -1,0 +1,429 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #666;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+ul {
+  padding: 0;
+}
+
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+
+.image-text {
+  position: relative;
+}
+
+.image-text__text {
+  bottom: 5%;
+  color: #fff;
+  position: absolute;
+  right: 5%;
+}
+
+/*
+ * Layout
+ */
+.wrap {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.wrap--main {
+  padding-bottom: 2em;
+}
+
+.sidebar,
+.main {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.main {
+  background-color: #aaa;
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+
+
+.header {
+  background-color: #fff;
+  color: #666;
+}
+
+.logonav {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  padding: .5em 1em;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo img {
+  display: inline-block;
+  max-width: 400px;
+  width: 50%;
+}
+
+.navigation-nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+.navigation-nav a {
+  color: #666;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all .25s ease-in-out;
+}
+
+.navigation-item--active a,
+.navigation-nav a:hover {
+  color: #e1e;
+}
+
+.footer-top a,
+.sidebar a,
+.main a {
+  color: #eee;
+}
+
+.footer-top a:hover,
+.sidebar a:hover,
+.main a:hover {
+  color: #e1e;
+}
+
+.read-more {
+  clear: both;
+  float: right;
+}
+
+.sidebar .article {
+  margin-bottom: 40px;
+}
+
+.sidebar .article header {
+  margin-bottom: 10px;
+}
+
+.sidebar .article h4 {
+  margin-bottom: 10px;
+}
+
+.footer {
+  font-size: .85em;
+}
+
+.footer-top {
+  background-color: #aaa;
+  padding: 1em 0;
+}
+
+.footer-bottom {
+  padding-bottom: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  margin: 0;
+}
+
+.footer-bottom {
+  background-color: #fff;
+  color: #aaa;
+}
+
+.footer-bottom__top {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1em 0;
+}
+
+.footer-nav ul {
+  list-style-type: none;
+}
+
+.footer-nav li {
+  margin: .5em 0;
+}
+
+.footer-nav ul a {
+  color: #e1e;
+}
+
+.footer-nav {
+  flex: 1 50%;
+  text-align: center;
+}
+
+
+.footer-logo {
+  text-align: center;
+}
+
+.footer-logo img {
+  display: inline-block;
+  width: 50%;
+}
+
+.footer-bottom__bottom {
+  text-align: center;
+}
+
+/*
+ * Form styling
+ */
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+input[type="submit"] {
+  background-color: #333;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.form-item-group {
+  margin-bottom: 20px;
+}
+
+.form-item-group-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-item-group-wrapper .form-item-group {
+  display: block;
+  width: 48%;
+}
+
+.form-item-group__title {
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-left: 12px;
+  width: 100%;
+}
+
+.form-item--type-select select {
+  width: 50%;
+}
+
+.form-item-group--type-radio {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-item-group--type-radio .form-item--type-radio {
+  width: 25%;
+}
+
+.form-item--type-radio input {
+  margin-right: 10px;
+}
+
+.form-item--type-radio label {
+  display: inline-block;
+  transition: transform .25s ease-in-out;
+}
+
+.form-item--type-radio input:checked + label {
+  transform: scale(1.2);
+}
+
+.form-item--type-checkbox {
+  padding-left: 20px;
+  position: relative;
+}
+
+.form-item--type-checkbox input {
+  display: none;
+}
+
+.form-item--type-checkbox input + label:before{
+  content: '✓';
+  left: 4px;
+  opacity: .2;
+  position: absolute;
+}
+
+.form-item--type-checkbox input:checked + label:before{
+  opacity: 1;
+}
+
+.form-item--type-textarea,
+.form-item--type-email,
+.form-item--type-text {
+  padding-top: 20px;
+  position: relative;
+}
+
+
+.form-item--type-textarea textarea,
+.form-item--type-email input,
+.form-item--type-text input {
+  border: 1px solid #fff;
+  font-size: 14px;
+  height: 40px;
+  padding: 8px;
+  width: 100%;
+}
+
+.form-item--type-textarea textarea {
+  height: 150px;
+}
+
+.form-item--type-textarea .form-item-group__title,
+.form-item--type-email .form-item-group__title,
+.form-item--type-text .form-item-group__title {
+  color: #ccc;
+  pointer-events: none;
+  position: absolute;
+  top: 32px;
+  transition: all .25s ease-in-out;
+  width: auto;
+}
+
+.form-item--type-textarea textarea:focus + .form-item-group__title,
+.form-item--type-textarea textarea.is-not-empty + .form-item-group__title,
+.form-item--type-email input:focus + .form-item-group__title,
+.form-item--type-email input.is-not-empty + .form-item-group__title,
+.form-item--type-text input:focus + .form-item-group__title,
+.form-item--type-text input.is-not-empty + .form-item-group__title {
+  color: #333;
+  top: 0;
+}
+
+.form-item--type-textarea textarea.is-not-empty:invalid,
+.form-item--type-text input.is-not-empty:invalid,
+.form-item--type-email input.is-not-empty:invalid {
+  border: 1px solid #aa0000;
+}
+
+.form-item--type-textarea textarea.is-not-empty:invalid + .form-item-group__title,
+.form-item--type-text input.is-not-empty:invalid + .form-item-group__title,
+.form-item--type-email input.is-not-empty:invalid + .form-item-group__title {
+  color: #aa0000;
+}
+
+.contact-summary {
+  padding-left: 20px;
+}
+
+.contact-summary-title {
+  color: #333;
+  font-weight: bold;
+}
+
+/*
+ * Styles for screens over 768px
+ */
+@media only screen and (min-width: 768px) {
+  img.align-left,
+  img.align-right {
+    margin-bottom: 20px;
+    width: 50%;
+  }
+
+  img.align-left {
+    float: left;
+    margin-right: 20px;
+  }
+
+  img.align-right {
+    float: right;
+    margin-left: 20px;
+  }
+
+  .logonav {
+    flex-direction: row;
+  }
+
+
+  .logo {
+    width: 10%;
+  }
+
+  .navigation {
+    display: flex;
+    width: 90%;
+  }
+
+  .wrap--main {
+    background-color: #aaa;
+    display: flex;
+    padding: 2em 1em;
+  }
+
+  .sidebar,
+  .main {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+
+  .main {
+    flex: 1 66%;
+    margin-right: 15px;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  .sidebar {
+    flex: 1 33%;
+    margin-left: 15px;
+  }
+
+  .footer-bottom__top {
+    padding: 1em;
+  }
+
+
+  .footer-logo,
+  .footer-nav {
+    flex: 1 33%;
+    text-align: left;
+  }
+}
+
+
+/*
+ * Styles for screens over 768px
+ */
+@media only screen and (min-width: 1024px) {
+  img.align-left,
+  img.align-right {
+    width: 33%;
+  }
+}
